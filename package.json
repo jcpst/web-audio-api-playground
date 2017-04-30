@@ -1,21 +1,22 @@
 {
-  "name": "audio",
+  "name": "web-audio-api-playground",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup --config",
+    "dev": "rollup --config --watch --live",
     "lint": "standard",
-    "test": "npm run lint -s && npm run unit -s",
-    "unit": "jest",
-    "watch": "nodemon --watch src --exec \"npm run build -s\""
+    "test": "standard && jest",
+    "unit": "jest"
   },
   "devDependencies": {
     "jest": "^19.0.2",
-    "nodemon": "^1.11.0",
+    "pre-commit": "^1.2.2",
     "rollup": "^0.41.6",
     "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-livereload": "^0.4.0",
+    "rollup-watch": "^3.2.2",
     "standard": "^10.0.2"
-  },
-  "dependencies": {}
+  }
 }
